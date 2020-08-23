@@ -1,0 +1,5 @@
+I:/programing/mona/mate2e/mate2/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+I:/programing/mona/mate2e/mate2/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+I:/programing/mona/mate2e/mate2/out/build/x64-Debug/mate2/CMakeFiles/mate2.dir
+I:/programing/mona/mate2e/mate2/out/build/x64-Debug/mate2/CMakeFiles/edit_cache.dir
+I:/programing/mona/mate2e/mate2/out/build/x64-Debug/mate2/CMakeFiles/rebuild_cache.dir

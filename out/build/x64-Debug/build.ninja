@@ -39,7 +39,7 @@ include rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D I:\programing\mona\mate2e\mate2\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -50,7 +50,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SI:\programing\mona\mate2e\mate2 -B"I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)""
+  COMMAND = cmd.exe /C "cd /D I:\programing\mona\mate2e\mate2\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SI:\programing\mona\mate2e\mate2 -BI:\programing\mona\mate2e\mate2\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -72,14 +72,42 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 build cmake_object_order_depends_target_mate2_Debug: phony || mate2\CMakeFiles\mate2.dir
 
 build mate2\CMakeFiles\mate2.dir\mate2.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\mate2.cpp || cmake_object_order_depends_target_mate2_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
   OBJECT_DIR = mate2\CMakeFiles\mate2.dir
   OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir
   TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
   TARGET_PDB = mate2\mate2.pdb
 
 build mate2\CMakeFiles\mate2.dir\parser\parser.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\parser\parser.cpp || cmake_object_order_depends_target_mate2_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
+  OBJECT_DIR = mate2\CMakeFiles\mate2.dir
+  OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir\parser
+  TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
+  TARGET_PDB = mate2\mate2.pdb
+
+build mate2\CMakeFiles\mate2.dir\parser\tokenizer.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\parser\tokenizer.cpp || cmake_object_order_depends_target_mate2_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
+  OBJECT_DIR = mate2\CMakeFiles\mate2.dir
+  OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir\parser
+  TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
+  TARGET_PDB = mate2\mate2.pdb
+
+build mate2\CMakeFiles\mate2.dir\parser\regex_tokenizer.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\parser\regex_tokenizer.cpp || cmake_object_order_depends_target_mate2_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
+  OBJECT_DIR = mate2\CMakeFiles\mate2.dir
+  OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir\parser
+  TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
+  TARGET_PDB = mate2\mate2.pdb
+
+build mate2\CMakeFiles\mate2.dir\parser\char_tokenizer.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\parser\char_tokenizer.cpp || cmake_object_order_depends_target_mate2_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
+  OBJECT_DIR = mate2\CMakeFiles\mate2.dir
+  OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir\parser
+  TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
+  TARGET_PDB = mate2\mate2.pdb
+
+build mate2\CMakeFiles\mate2.dir\parser\token.cpp.obj: CXX_COMPILER__mate2_Debug ..\..\..\mate2\parser\token.cpp || cmake_object_order_depends_target_mate2_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
   OBJECT_DIR = mate2\CMakeFiles\mate2.dir
   OBJECT_FILE_DIR = mate2\CMakeFiles\mate2.dir\parser
   TARGET_COMPILE_PDB = mate2\CMakeFiles\mate2.dir\
@@ -93,7 +121,7 @@ build mate2\CMakeFiles\mate2.dir\parser\parser.cpp.obj: CXX_COMPILER__mate2_Debu
 #############################################
 # Link the executable mate2\mate2.exe
 
-build mate2\mate2.exe: CXX_EXECUTABLE_LINKER__mate2_Debug mate2\CMakeFiles\mate2.dir\mate2.cpp.obj mate2\CMakeFiles\mate2.dir\parser\parser.cpp.obj
+build mate2\mate2.exe: CXX_EXECUTABLE_LINKER__mate2_Debug mate2\CMakeFiles\mate2.dir\mate2.cpp.obj mate2\CMakeFiles\mate2.dir\parser\parser.cpp.obj mate2\CMakeFiles\mate2.dir\parser\tokenizer.cpp.obj mate2\CMakeFiles\mate2.dir\parser\regex_tokenizer.cpp.obj mate2\CMakeFiles\mate2.dir\parser\char_tokenizer.cpp.obj mate2\CMakeFiles\mate2.dir\parser\token.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -110,7 +138,7 @@ build mate2\mate2.exe: CXX_EXECUTABLE_LINKER__mate2_Debug mate2\CMakeFiles\mate2
 # Utility command for edit_cache
 
 build mate2\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)\mate2" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D I:\programing\mona\mate2e\mate2\out\build\x64-Debug\mate2 && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -121,7 +149,7 @@ build mate2\edit_cache: phony mate2\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build mate2\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)\mate2" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SI:\programing\mona\mate2e\mate2 -B"I:\programing\mona\mate2e\mate2\out\build\x64-Debug (默认值)""
+  COMMAND = cmd.exe /C "cd /D I:\programing\mona\mate2e\mate2\out\build\x64-Debug\mate2 && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SI:\programing\mona\mate2e\mate2 -BI:\programing\mona\mate2e\mate2\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -141,14 +169,14 @@ build mate2.exe: phony mate2\mate2.exe
 # =============================================================================
 
 #############################################
-# Folder: I:/programing/mona/mate2e/mate2/out/build/x64-Debug (默认值)
+# Folder: I:/programing/mona/mate2e/mate2/out/build/x64-Debug
 
 build all: phony mate2\all
 
 # =============================================================================
 
 #############################################
-# Folder: I:/programing/mona/mate2e/mate2/out/build/x64-Debug (默认值)/mate2
+# Folder: I:/programing/mona/mate2e/mate2/out/build/x64-Debug/mate2
 
 build mate2\all: phony mate2\mate2.exe
 
