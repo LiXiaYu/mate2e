@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "I:/programing/mona/mate2e/mate2/out/build/x64-Debug/mate2/CMakeFiles/mate2.dir/embed.manifest"
